@@ -1,26 +1,24 @@
 {
-  "name": "waterline-salesforce",
-  "version": "0.0.3",
-  "description": "Salesforce adapter for Sails / Waterline",
+  "name": "waterline-es",
+  "version": "0.0.0",
+  "description": "ElasticSearch adapter for Sails / Waterline",
   "main": "./lib/adapter.js",
   "scripts": {
     "test": "node test/integration/runner -R spec -b"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/VivintSolar/waterline-salesforce.git"
+    "url": "git://github.com/VivintSolar/waterline-elasticsearch.git"
   },
   "keywords": [
-    "forcedotcom",
-    "force.com",
-    "salesforce",
+    "elasticsearch",
     "adapter",
     "sails",
     "waterline",
     "sails.js",
     "plugin"
   ],
-  "author": "ksmithut",
+  "author": "sethtippetts",
   "license": "MIT",
   "readmeFilename": "README.md",
   "dependencies": {
@@ -40,7 +38,7 @@
     "captains-log": "~0.11.0"
   },
   "waterlineAdapter": {
-    "type": "salesforce",
+    "type": "elasticsearch",
     "interfaces": [],
     "waterlineVersion": "~0.10.0"
   }

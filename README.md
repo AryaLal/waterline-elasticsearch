@@ -1,8 +1,8 @@
 ![image_squidhome@2x.png](http://i.imgur.com/RIvu9.png)
 
-# Salesforce
+# ElasticSearch
 
-Waterline adapter for salesforce.com.
+Waterline adapter for ElasticSearch.
 
 This is a rough implementation, so PRs are welcome. We're using it on several of
 our projects, and we'll be making fixes and updates as needed, but raising
@@ -13,28 +13,29 @@ issues will help us harden this implementation.
 Install from NPM.
 
 ```bash
-$ npm install waterline-salesforce --save
+$ npm install waterline-es --save
 ```
 
 ## Waterline Configuration
 
-Add the salesforce config to the `config/adapters.js` file.
+Add the elasticSearch config to the `config/adapters.js` file.
 
 ### Using with Waterline v0.10.x
 
 ```javascript
+import waterline from 'waterline';
+import elasticSearchAdapter from 'waterline-es';
+
 var config = {
   adapters: {
-    salesforce: salesforceAdapter
+    elasticsearch: elasticSearchAdapter
   },
   connections: {
-    salesforce: {
-      adapter: 'salesforce',
+    elasticSearch: {
+      adapter: 'elasticsearch',
       connectionParams: {
-        loginUrl: 'https://test.salesforce.com'
-      },
-      username: '{{username}}',
-      password: '{{password}}{{accessToken}}'
+        loginUrl: 'https://localhost:9200'
+      }
     }
   }
 };
